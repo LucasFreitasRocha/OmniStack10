@@ -1,8 +1,10 @@
 const express = require('express');
 const conection = require('./db/conection');
 const routes = require('./routes');
+const cors = require('cors');
 const app = express();
 conection.connectDb();
+app.use(cors());
 app.use(express.json());
 app.use(routes);
 app.listen(8080);
