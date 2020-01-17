@@ -1,10 +1,14 @@
 const express = require('express');
 const conection = require('./db/conection');
 const routes = require('./routes');
+const http = require('http');
 const cors = require('cors');
+const { setupWebsocket} = require('./websocket');
 const app = express();
+const server = http.Server(app);
+setupWebsocket(server);
 conection.connectDb();
 app.use(cors());
 app.use(express.json());
 app.use(routes);
-app.listen(8080);
+server.listen(8080);

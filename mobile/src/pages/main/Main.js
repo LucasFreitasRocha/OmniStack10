@@ -1,14 +1,15 @@
 import React, {useEffect, useState} from 'react';
-import {StyleSheet, Image, View, Text, TextInput, TouchableOpacity , Keyboard} from 'react-native';
+import { StyleSheet, Image, View, Text,  TextInput, TouchableOpacity , Keyboard} from 'react-native';
 
 /* pegar altura do teclado pelo obejto keyboard para quando aparecer , jogar o imput pra cima */ 
 import MapView,{Marker, Callout} from 'react-native-maps';
 import { requestPermissionsAsync, getCurrentPositionAsync  }from 'expo-location';
-import { TextInput } from 'react-native-gesture-handler';
+//import { TextInput } from 'react-native-gesture-handler';
 import { MaterialIcons } from '@expo/vector-icons';
 
 
-import api from '../../services/Api'
+import api from '../../services/Api';
+import {connect, disconnect, subscribeToNewDevs} from '../../services/Socket';
 
 function Main({ navigation}){
     const [currentRegion, setCurrentRegion] = useState(null);
@@ -32,11 +33,23 @@ function Main({ navigation}){
         }
         loadInitialPosition();
     }, []);
+    useEffect(()=> {
+        subscribeToNewDevs(dev => setDevs([...devs, dev]));
+    }, [devs]);
 
     if(!currentRegion){
         return null;
     }
+    function setupWebsocket(){
+        disconnect();
+        const { latitude, longitude} = currentRegion;
 
+       connect(
+           latitude,
+           longitude,
+           techs,
+       ); 
+    }
     async function loadDevs(){
         const{latitude, longitude} = currentRegion;
 
@@ -48,6 +61,7 @@ function Main({ navigation}){
             }
         });
         setDevs(response.data.devs);
+        setupWebsocket();
     }
     function handleRegionChanged( region){
         setCurrentRegion(region);
