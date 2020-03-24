@@ -47,7 +47,7 @@ anotacoes.txt
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/11/web/node_modules
+11/web/node_modules
 /11/web/.pnp
 /11/web/.pnp.js
 
