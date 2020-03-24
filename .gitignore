@@ -1,44 +1,84 @@
 .idea
 anotacoes.txt
-/backEnd/node_modules
-/backEnd/src/db
+/10/backEnd/node_modules
+/10/backEnd/src/db
 
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/web/node_modules
-/web/.pnp
-/web/.pnp.js
+/10/web/node_modules
+/10/web/.pnp
+/10/web/.pnp.js
 
 # testing
-/web/coverage
+/10/web/coverage
 
 # production
-/web/build
+/10/web/build
 
 # misc
-/web/.DS_Store
-/web/.env.local
-/web/.env.development.local
-/web/.env.test.local
-/web/.env.production.local
+/10/web/.DS_Store
+/10/web/.env.local
+/10/web/.env.development.local
+/10/web/.env.test.local
+/10/web/.env.production.local
 
-/web/npm-debug.log*
-/web/yarn-debug.log*
-/web/yarn-error.log*
+/10/web/npm-debug.log*
+/10/web/yarn-debug.log*
+/10/web/yarn-error.log*
 
 
-/mobile/node_modules/**/*
-/mobile/.expo/*
-/mobile/npm-debug.*
-/mobile/*.jks
-/mobile/*.p8
-/mobile/*.p12
-/mobile/*.key
-/mobile/*.mobileprovision
-/mobile/*.orig.*
-/mobile/web-build/
-/mobile/web-report/
+/10/mobile/node_modules/**/*
+/10/mobile/.expo/*
+/10/mobile/npm-debug.*
+/10/mobile/*.jks
+/10/mobile/*.p8
+/10/mobile/*.p12
+/10/mobile/*.key
+/10/mobile/*.mobileprovision
+/10/mobile/*.orig.*
+/10/mobile/web-build/
+/10/mobile/web-report/
 
-# macOS
-.DS_Store
+
+/11/backEnd/node_modules
+/11/backEnd/src/db
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/11/web/node_modules
+/11/web/.pnp
+/11/web/.pnp.js
+
+# testing
+/11/web/coverage
+
+# production
+/11/web/build
+
+# misc
+/11/web/.DS_Store
+/11/web/.env.local
+/11/web/.env.development.local
+/11/web/.env.test.local
+/11/web/.env.production.local
+
+/11/web/npm-debug.log*
+/11/web/yarn-debug.log*
+/11/web/yarn-error.log*
+
+
+/11/mobile/node_modules/**/*
+/11/mobile/.expo/*
+/11/mobile/npm-debug.*
+/11/mobile/*.jks
+/11/mobile/*.p8
+/11/mobile/*.p12
+/11/mobile/*.key
+/11/mobile/*.mobileprovision
+/11/mobile/*.orig.*
+/11/mobile/web-build/
+/11/mobile/web-report/
+
+
