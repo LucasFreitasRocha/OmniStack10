@@ -7,10 +7,14 @@
     "dev": "nodemon src/index.js"
   },
   "dependencies": {
+    "a": "^2.1.2",
     "axios": "^0.19.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "knex": "^0.20.13",
     "mongoose": "^5.8.7",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.1.0",
     "socket.io": "^2.3.0"
   },
   "devDependencies": {

@@ -41,8 +41,7 @@ anotacoes.txt
 /10/mobile/web-report/
 
 
-/11/backEnd/node_modules
-/11/backEnd/src/db
+11/backend/node_modules
 
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
