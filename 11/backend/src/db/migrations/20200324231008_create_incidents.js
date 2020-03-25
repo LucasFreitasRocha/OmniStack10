@@ -2,11 +2,11 @@
 exports.up = function(knex) {
     return knex.schema.createTable('incidents',  (t) =>{
         t.increments();
-        t.integer('id_ongs').notNullable();
+        t.string('ong_id').notNullable();
         t.string('title').notNullable();
         t.string('description').notNullable();
         t.decimal('value').notNullable();
-        t.foreign('id_ongs').references('id').inTable('ongs');
+        t.foreign('ong_id').references('id').inTable('ongs');
     });
         
 };
