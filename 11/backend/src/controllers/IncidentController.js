@@ -1,7 +1,21 @@
 const connection = require('../db/connection');
 module.exports = {
     async index(req,res){
-        return res.json( await connection('incidents').select('*'));
+        const {page =1} = req.query;
+        const [count] = await connection('incidents').count();
+        res.header('X-Total-Count', count['count(*)']);
+        return res.json( await connection('incidents')
+        .join('ongs', 'ong_id', '=', 'incidents.ong_id')
+        .limit(5)
+        .offset((page- 1)*5)
+        .select([
+            'incidents.*',
+            'ongs.name',
+            'ongs.mail',
+            'ongs.whatsapp',
+            'ongs.city',
+            'ongs.uf'    
+        ]));
     },
     async create(req,res){
         const {title,description, value} = req.body;
@@ -13,6 +27,7 @@ module.exports = {
             value,
             ong_id
         });
+
         return res.json({id});
     },
     async delete(req,res){
