@@ -6,7 +6,7 @@ module.exports = {
     connection: {
       host : '127.0.0.1',
       user : 'lucas',
-      password : '123.Senha',
+      password : '123.senha',
       database : 'be_the_hero'
     },
     insecureAuth : true,

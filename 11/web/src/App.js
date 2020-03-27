@@ -1,8 +1,13 @@
 import React from 'react';
-import Header from './Header'
-
+import './global.css'
+import Login from './pages/login'
 function App() {
-  return (<Header  > Be the Hero</Header>  );
+  return (
+  <>
+    
+    <Login></Login>
+  </>
+     );
 }
 
 export default App;
