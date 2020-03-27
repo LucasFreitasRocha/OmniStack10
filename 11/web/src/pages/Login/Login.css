@@ -6,7 +6,7 @@
 
     display: flex;
     align-items: center; 
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .login-container section.form{
@@ -21,20 +21,4 @@
 .login-container section.form h1{
     font-size: 32px;
     margin-bottom: 32px;
-} 
-.login-container section.form a{
-    display: flex;
-    align-items: center;
-    margin-top:  40px;
-    color: #41414d;
-    font-size: 18px;
-    text-decoration: none;
-    font-weight: 500;
-    transition:  opacity 0.2s;
-} 
-.login-container section.form a:hover{
-    opacity: 0.8;
-} 
-.login-container section.form a svg{
-   margin-right: 8px;
 } 
